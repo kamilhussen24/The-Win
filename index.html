@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f3ff">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="color-scheme" content="light">
+
+    <title>THE WIN — Join Telegram</title>
+    <meta name="description" content="THE WIN প্রিমিয়াম টেলিগ্রাম কমিউনিটিতে জয়েন করুন — মার্কেট আপডেট, ডেইলি ডিসকাশন।">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="THE WIN — Join Telegram">
+    <meta property="og:description" content="প্রিমিয়াম টেলিগ্রাম কমিউনিটি">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '4708576522762462');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=4708576522762462&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+
+        :root{
+            --primary:#635BFF;
+            --primary-light:#8B84FF;
+            --primary-dark:#4338CA;
+
+            --cyan:#08A6C7;
+            --green:#12B981;
+
+            --ink:#172033;
+            --muted:#667085;
+            --soft:#98A2B3;
+
+            --card:rgba(255,255,255,.82);
+            --border:rgba(99,91,255,.10);
+
+            --radius:18px;
+            --ease:cubic-bezier(.22,1,.36,1);
+        }
+
+        *,
+        *::before,
+        *::after{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            -webkit-text-size-adjust:100%;
+            text-size-adjust:100%;
+        }
+
+        body{
+            min-height:100vh;
+            min-height:100dvh;
+
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+
+            padding:
+                calc(12px + env(safe-area-inset-top, 0px))
+                16px
+                calc(16px + env(safe-area-inset-bottom, 0px));
+
+            background:
+                radial-gradient(
+                    circle at 15% 0%,
+                    rgba(99,91,255,.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 100% 30%,
+                    rgba(8,166,199,.10),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    180deg,
+                    #f5f3ff 0%,
+                    #f8fbff 52%,
+                    #f2faf7 100%
+                );
+
+            background-attachment:fixed;
+
+            font-family:
+                'Hind Siliguri',
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color:var(--ink);
+            line-height:1.5;
+
+            overflow-x:hidden;
+
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        .main{
+            width:100%;
+            max-width:440px;
+            position:relative;
+        }
+
+        /* ===== STAGGER ENTRY ===== */
+
+        .main > *{
+            animation:rise .55s var(--ease) both;
+        }
+
+        .main > *:nth-child(1){ animation-delay:.04s; }
+        .main > *:nth-child(2){ animation-delay:.09s; }
+        .main > *:nth-child(3){ animation-delay:.14s; }
+        .main > *:nth-child(4){ animation-delay:.19s; }
+        .main > *:nth-child(5){ animation-delay:.24s; }
+        .main > *:nth-child(6){ animation-delay:.29s; }
+
+        @keyframes rise{
+            from{
+                opacity:0;
+                transform:translateY(14px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        /* ===== HEADER ===== */
+
+        .head{
+            display:flex;
+            align-items:center;
+
+            gap:clamp(14px, 4vw, 18px);
+
+            padding:2px 2px 0;
+        }
+
+        .logo-wrap{
+            position:relative;
+
+            width:clamp(56px, 15vw, 64px);
+            height:clamp(56px, 15vw, 64px);
+
+            flex-shrink:0;
+        }
+
+        .logo-ring{
+            position:absolute;
+            inset:0;
+
+            border-radius:50%;
+
+            border:2px solid rgba(99,91,255,.35);
+
+            animation:ringPulse 2.8s ease-out infinite;
+
+            will-change:transform,opacity;
+        }
+
+        .logo-ring:nth-child(2){
+            animation-delay:1.4s;
+        }
+
+        @keyframes ringPulse{
+
+            0%{
+                transform:scale(.85);
+                opacity:.85;
+            }
+
+            100%{
+                transform:scale(1.5);
+                opacity:0;
+            }
+        }
+
+        .tg-logo{
+            position:absolute;
+            inset:7px;
+
+            border-radius:50%;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            color:#fff;
+
+            font-size:clamp(1.35rem, 4vw, 1.6rem);
+
+            background:
+                linear-gradient(
+                    140deg,
+                    #8B84FF 0%,
+                    #635BFF 50%,
+                    #4338CA 100%
+                );
+
+            box-shadow:
+                0 14px 28px -12px rgba(99,91,255,.9),
+                inset 0 -3px 8px rgba(0,0,0,.12),
+                inset 0 1px 1px rgba(255,255,255,.35);
+
+            animation:bob 3.2s ease-in-out infinite;
+
+            will-change:transform;
+        }
+
+        @keyframes bob{
+
+            0%,100%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-5px);
+            }
+        }
+
+        .head-text{
+            text-align:left;
+
+            min-width:0;
+            flex:1;
+        }
+
+        .title{
+            display:flex;
+            align-items:center;
+
+            gap:7px;
+
+            font-size:clamp(1.25rem, 5vw, 1.6rem);
+
+            font-weight:700;
+
+            letter-spacing:.3px;
+
+            line-height:1.2;
+
+            white-space:nowrap;
+        }
+
+        .title span{
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #172033 8%,
+                    #635BFF 55%,
+                    #08A6C7 96%
+                );
+
+            -webkit-background-clip:text;
+            background-clip:text;
+
+            -webkit-text-fill-color:transparent;
+
+            color:transparent;
+        }
+
+        .title i{
+            font-size:.9em;
+
+            color:var(--primary);
+
+            flex-shrink:0;
+        }
+
+        .subtitle{
+
+            margin-top:3px;
+
+            font-size:clamp(.75rem, 2.8vw, .85rem);
+
+            font-weight:500;
+
+            color:var(--muted);
+
+            line-height:1.35;
+        }
+
+        /* ===== MEMBER BADGE ===== */
+
+        .member-badge{
+
+            display:inline-flex;
+            align-items:center;
+
+            gap:9px;
+
+            margin:18px auto 0;
+
+            padding:9px 20px;
+
+            border-radius:999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(99,91,255,.09),
+                    rgba(8,166,199,.08)
+                );
+
+            border:1px solid rgba(99,91,255,.18);
+
+            box-shadow:
+                0 8px 22px -12px rgba(99,91,255,.5),
+                inset 0 1px 0 rgba(255,255,255,.8);
+
+            line-height:1;
+
+            white-space:nowrap;
+        }
+
+        .member-wrap{
+            display:flex;
+            justify-content:center;
+        }
+
+        .live-dot{
+
+            position:relative;
+
+            width:8px;
+            height:8px;
+
+            border-radius:50%;
+
+            background:#18C985;
+
+            flex-shrink:0;
+
+            box-shadow:
+                0 0 0 0 rgba(24,201,133,.6);
+
+            animation:live 1.9s ease-out infinite;
+        }
+
+        @keyframes live{
+
+            0%{
+                box-shadow:
+                    0 0 0 0 rgba(24,201,133,.6);
+            }
+
+            70%{
+                box-shadow:
+                    0 0 0 9px rgba(24,201,133,0);
+            }
+
+            100%{
+                box-shadow:
+                    0 0 0 0 rgba(24,201,133,0);
+            }
+        }
+
+        .member-count{
+
+            font-size:clamp(.92rem, 3.4vw, 1.02rem);
+
+            font-weight:700;
+
+            color:#172033;
+
+            letter-spacing:.2px;
+
+            font-variant-numeric:tabular-nums;
+        }
+
+        .member-label{
+
+            font-size:clamp(.72rem, 2.6vw, .8rem);
+
+            font-weight:600;
+
+            color:var(--muted);
+
+            margin-left:-2px;
+        }
+
+        /* ===== HINT ===== */
+
+        .hint{
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            gap:8px;
+
+            margin:18px 0 8px;
+
+            font-size:clamp(.72rem, 2.7vw, .78rem);
+
+            font-weight:500;
+
+            color:#7B8798;
+        }
+
+        .hint i{
+
+            color:var(--primary);
+
+            font-size:.95rem;
+
+            animation:pointDown 1.3s ease-in-out infinite;
+
+            will-change:transform;
+        }
+
+        @keyframes pointDown{
+
+            0%,100%{
+                transform:translateY(-3px);
+            }
+
+            50%{
+                transform:translateY(3px);
+            }
+        }
+
+        /* ===== CTA ===== */
+
+        .cta-wrap{
+            display:flex;
+            justify-content:center;
+        }
+
+        .join-btn{
+
+            position:relative;
+            overflow:hidden;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            gap:11px;
+
+            width:100%;
+            max-width:330px;
+
+            min-height:52px;
+
+            padding:15px 24px;
+
+            border:none;
+
+            border-radius:var(--radius);
+
+            font-family:inherit;
+
+            font-size:clamp(1.02rem, 3.9vw, 1.15rem);
+
+            font-weight:700;
+
+            color:#fff;
+
+            text-decoration:none;
+
+            cursor:pointer;
+
+            touch-action:manipulation;
+
+            -webkit-tap-highlight-color:transparent;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #817AFF 0%,
+                    #635BFF 50%,
+                    #4338CA 100%
+                );
+
+            box-shadow:
+                0 18px 34px -14px rgba(99,91,255,.9),
+                inset 0 1px 0 rgba(255,255,255,.35);
+
+            transition:
+                transform .18s ease,
+                box-shadow .18s ease;
+
+            animation:btnPulse 2.3s ease-in-out infinite;
+        }
+
+        @keyframes btnPulse{
+
+            0%{
+                box-shadow:
+                    0 18px 34px -14px rgba(99,91,255,.9),
+                    0 0 0 0 rgba(99,91,255,.35);
+            }
+
+            70%{
+                box-shadow:
+                    0 18px 34px -14px rgba(99,91,255,.9),
+                    0 0 0 15px rgba(99,91,255,0);
+            }
+
+            100%{
+                box-shadow:
+                    0 18px 34px -14px rgba(99,91,255,.9),
+                    0 0 0 0 rgba(99,91,255,0);
+            }
+        }
+
+        .join-btn::after{
+
+            content:'';
+
+            position:absolute;
+
+            top:-25%;
+            left:-70%;
+
+            width:45%;
+            height:150%;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    transparent,
+                    rgba(255,255,255,.48),
+                    transparent
+                );
+
+            transform:skewX(-22deg);
+
+            animation:shine 3.6s ease-in-out infinite;
+
+            pointer-events:none;
+        }
+
+        @keyframes shine{
+
+            0%{
+                left:-70%;
+            }
+
+            55%{
+                left:135%;
+            }
+
+            100%{
+                left:135%;
+            }
+        }
+
+        .join-btn:hover{
+            transform:translateY(-2px);
+        }
+
+        .join-btn:active{
+            transform:scale(.97);
+            transition:.05s;
+        }
+
+        .join-btn:focus-visible{
+
+            outline:
+                3px solid rgba(99,91,255,.4);
+
+            outline-offset:3px;
+        }
+
+        .btn-ic{
+
+            display:inline-flex;
+
+            align-items:center;
+            justify-content:center;
+
+            width:32px;
+            height:32px;
+
+            border-radius:50%;
+
+            font-size:1rem;
+
+            background:rgba(255,255,255,.2);
+
+            flex-shrink:0;
+        }
+
+        /* ===== FEATURES ===== */
+
+        .features{
+
+            display:grid;
+
+            grid-template-columns:1fr 1fr;
+
+            gap:10px;
+
+            margin-top:22px;
+        }
+
+        .feat{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:11px;
+
+            padding:13px 12px;
+
+            border-radius:16px;
+
+            background:var(--card);
+
+            border:
+                1px solid var(--border);
+
+            box-shadow:
+                0 8px 24px -20px rgba(23,32,51,.4);
+
+            backdrop-filter:blur(10px);
+            -webkit-backdrop-filter:blur(10px);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .feat:hover{
+
+            transform:translateY(-3px);
+
+            box-shadow:
+                0 14px 28px -18px rgba(23,32,51,.5);
+        }
+
+        .feat i{
+
+            display:flex;
+
+            align-items:center;
+            justify-content:center;
+
+            width:clamp(32px, 9vw, 36px);
+            height:clamp(32px, 9vw, 36px);
+
+            border-radius:12px;
+
+            font-size:clamp(.85rem, 3vw, .95rem);
+
+            color:#fff;
+
+            flex-shrink:0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #817AFF,
+                    #635BFF
+                );
+
+            box-shadow:
+                0 9px 18px -9px rgba(99,91,255,.9);
+        }
+
+        .feat:nth-child(2) i{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #23D7B0,
+                    #12B981
+                );
+
+            box-shadow:
+                0 9px 18px -9px rgba(18,185,129,.9);
+        }
+
+        .feat:nth-child(3) i{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4CC9F0,
+                    #08A6C7
+                );
+
+            box-shadow:
+                0 9px 18px -9px rgba(8,166,199,.9);
+        }
+
+        .feat:nth-child(4) i{
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #FFB86B,
+                    #F28C28
+                );
+
+            box-shadow:
+                0 9px 18px -9px rgba(242,140,40,.9);
+        }
+
+        .feat span{
+
+            font-size:clamp(.72rem, 2.7vw, .8rem);
+
+            font-weight:600;
+
+            color:#344054;
+
+            line-height:1.3;
+
+            text-align:left;
+        }
+
+        /* ===== ADS BY ===== */
+
+        .ads-by{
+
+            margin-top:18px;
+
+            text-align:center;
+
+            font-size:.74rem;
+
+            font-weight:500;
+
+            color:#98A2B3;
+        }
+
+        .ads-by a{
+
+            color:var(--primary);
+
+            font-weight:700;
+
+            text-decoration:none;
+        }
+
+        .ads-by a:hover{
+            text-decoration:underline;
+        }
+
+        .ads-by a:focus-visible{
+
+            outline:
+                2px solid rgba(99,91,255,.45);
+
+            outline-offset:2px;
+
+            border-radius:3px;
+        }
+
+        /* ===== SMALL PHONE ===== */
+
+        @media (max-width:360px){
+
+            body{
+                padding-left:12px;
+                padding-right:12px;
+            }
+
+            .features{
+                gap:8px;
+            }
+
+            .feat{
+                padding:11px 9px;
+                gap:9px;
+            }
+
+            .member-badge{
+                padding:8px 16px;
+                gap:7px;
+            }
+        }
+
+        /* ===== VERY SMALL ===== */
+
+        @media (max-width:330px){
+
+            .head{
+                gap:12px;
+            }
+
+            .title{
+                white-space:normal;
+            }
+
+            .feat span{
+                font-size:.7rem;
+            }
+        }
+
+        /* ===== LARGE SCREEN ===== */
+
+        @media (min-width:640px){
+
+            body{
+                padding-top:26px;
+            }
+
+            .main{
+                max-width:460px;
+            }
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+
+        @media (prefers-reduced-motion:reduce){
+
+            *,
+            *::before,
+            *::after{
+
+                animation-duration:.001ms !important;
+
+                animation-iteration-count:1 !important;
+
+                transition-duration:.001ms !important;
+
+                scroll-behavior:auto !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<main class="main">
+
+    <!-- ===== HEADER ===== -->
+
+    <header class="head">
+
+        <div class="logo-wrap" aria-hidden="true">
+
+            <span class="logo-ring"></span>
+            <span class="logo-ring"></span>
+
+            <div class="tg-logo">
+                <i class="fab fa-telegram-plane"></i>
+            </div>
+
+        </div>
+
+        <div class="head-text">
+
+            <h1 class="title">
+
+                <span>THE WIN</span>
+
+                <i
+                    class="fas fa-circle-check"
+                    aria-hidden="true">
+                </i>
+
+            </h1>
+
+            <p class="subtitle">
+                প্রিমিয়াম টেলিগ্রাম কমিউনিটি
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ===== MEMBER BADGE ===== -->
+
+    <div class="member-wrap">
+
+        <div
+            class="member-badge"
+            role="status"
+            aria-label="১০,২০০+ সদস্য, এখন অনলাইন">
+
+            <span
+                class="live-dot"
+                aria-hidden="true">
+            </span>
+
+            <span class="member-count">
+                ১০,২০০+
+            </span>
+
+            <span class="member-label">
+                সদস্য
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===== HINT ===== -->
+
+    <div class="hint">
+
+        <i
+            class="fas fa-hand-point-down"
+            aria-hidden="true">
+        </i>
+
+        <span>
+            নিচের বাটনে ক্লিক করুন
+        </span>
+
+    </div>
+
+
+    <!-- ===== CTA ===== -->
+
+    <div class="cta-wrap">
+
+        <a
+            id="joinTelegramBtn"
+            class="join-btn"
+            href="https://t.me/+rhg3spF7yoI2ZTJl"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="টেলিগ্রাম গ্রুপে জয়েন করুন">
+
+            <span
+                class="btn-ic"
+                aria-hidden="true">
+
+                <i class="fab fa-telegram-plane"></i>
+
+            </span>
+
+            <span>
+                জয়েন গ্রুপ
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <!-- ===== FEATURES ===== -->
+
+    <div class="features">
+
+        <div class="feat">
+
+            <i
+                class="fas fa-chart-line"
+                aria-hidden="true">
+            </i>
+
+            <span>
+                প্রতিদিন আপডেট
+            </span>
+
+        </div>
+
+
+        <div class="feat">
+
+            <i
+                class="fas fa-clock"
+                aria-hidden="true">
+            </i>
+
+            <span>
+                ২৪/৭ কমিউনিটি
+            </span>
+
+        </div>
+
+
+        <div class="feat">
+
+            <i
+                class="fas fa-lock"
+                aria-hidden="true">
+            </i>
+
+            <span>
+                প্রাইভেট গ্রুপ
+            </span>
+
+        </div>
+
+
+        <div class="feat">
+
+            <i
+                class="fas fa-gem"
+                aria-hidden="true">
+            </i>
+
+            <span>
+                ডেইলি ডিসকাশন
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===== ADS BY ===== -->
+
+    <div class="ads-by">
+
+        Ads By
+
+        <a
+            href="https://t.me/+mjeIPVeI4iAzYzNl"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            KDex
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<script>
+
+    // true = Purchase ইভেন্ট চালু
+    // false = বন্ধ
+
+    const TRACK_PURCHASE = true;
+
+    (function () {
+
+        const btn =
+            document.getElementById('joinTelegramBtn');
+
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+
+            if (
+                TRACK_PURCHASE &&
+                typeof fbq === 'function'
+            ) {
+
+                fbq('track', 'Purchase', {
+
+                    currency: 'BDT',
+
+                    value: 100
+
+                });
+
+            }
+
+        }, {
+            passive:true
+        });
+
+    })();
+
+</script>
+
+</body>
+</html>
